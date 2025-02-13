@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta de Correio Fofa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="carta" onclick="moverCima()">
+    <div class="envelope">
+      <div class="flap"></div>
+      <div class="front">
+        <!-- Caminho para a imagem na pasta "f" minúsculo -->
+        <img src="C:\Users\luizp\Desktop\f\rola2.gif" alt="Gatinho fofinho" class="imagem">
+        <div class="texto">
+          <h1>muitasssss palavrassssssss</h1>
+          <p>gayyyyyyyyyyyy vc.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botão vermelho para gerar as palavras -->
+  <button class="botao" onclick="gerarPalavras()">Aperta aqui vai</button>
+
+  <!-- Texto destacado -->
+  <div id="texto" class="texto-destaque">
+    <p>Eu prometi não falar mais nada naquele sentido e por mais que seja difícil eu vou conseguir.</p>
+    <p>Não sei como tá sua vida agora, mas talvez você também tivesse com saudade, queria que me falasse isso.</p>
+  </div>
+
+  <div id="palavras-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

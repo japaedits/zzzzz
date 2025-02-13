@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f3f3f3;
+}
+
+.carta {
+  width: 498px;
+  height: 498px;
+  perspective: 1000px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.envelope {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: 2px solid #f2a0a3;
+  border-radius: 15px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.envelope .flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background-color: #f2a0a3;
+  border-radius: 15px 15px 0 0;
+  transition: transform 0.3s ease;
+}
+
+.envelope .front {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.imagem {
+  width: 498px; /* Ajuste o tamanho da imagem para 498px de largura */
+  height: 498px; /* Ajuste o tamanho da imagem para 498px de altura */
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.texto {
+  text-align: center;
+  margin-top: 10px;
+}
+
+h1 {
+  font-size: 24px;
+  font-family: 'Arial', sans-serif;
+  color: #ff6b81;
+}
+
+p {
+  font-size: 16px;
+  color: #333;
+}
+
+.botao {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.botao:hover {
+  background-color: #ff4d4d;
+}
+
+.texto-destaque {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #e3f2fd; /* Alterado para um fundo mais suave */
+  border: 2px solid #42a5f5; /* Cor do contorno foi ajustada */
+  border-radius: 10px;
+  font-size: 18px;
+  color: #333;
+  width: 80%;
+  text-align: left; /* Alinhamento à esquerda */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.texto-destaque p {
+  margin-bottom: 10px; /* Menor espaço entre os parágrafos */
+}
+
+#palavras-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Para não atrapalhar a interação com outros elementos */
+}
+
+.palavra {
+  position: absolute;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ff33cc; /* Cor das palavras */
+  transform: rotate(20deg);
+  animation: moverPalavras 5s infinite linear;
+}
+
+/* Animação para mover as palavras aleatoriamente */
+@keyframes moverPalavras {
+  0% {
+    transform: translate(0, 0) rotate(20deg);
+  }
+  25% {
+    transform: translate(50px, 50px) rotate(-30deg);
+  }
+  50% {
+    transform: translate(-100px, -50px) rotate(90deg);
+  }
+  75% {
+    transform: translate(150px, 70px) rotate(-60deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(20deg);
+  }
+}
